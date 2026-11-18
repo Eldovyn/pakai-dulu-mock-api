@@ -1,0 +1,185 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Tenda Camping",
+            "price": "50000 / hari",
+            "rate": 4.8,
+            "total_rate": 10,
+            "image_url": "http://10.240.32.166:4000/images/product-1.png",
+            "km": 1.5,
+            "localtion": "Depok, Jawa Barat",
+            "stock": 1,
+            "description": "Dolor commodo pariatur adipisicing occaecat ex duis dolore culpa quis anim fugiat occaecat veniam cupidatat.",
+            "detail": {
+                "category": "Elektronik",
+                "merek": "Canon",
+                "model": "Dolor",
+                "kondisi": "Mulus 95%",
+                "kelengkapan": "Dolor commodo pariatur adipisicing occaecat ex duis dolore culpa quis anim fugiat occaecat veniam cupidatat."
+            },
+            "specification": "- **Kondisi:** Baru / Bekas\n- **Material:** Polyester\n- **Warna:** Hitam\n- **Ukuran:** 200 x 150 cm\n- **Berat:** 2 kg\n- **Kapasitas:** 2-3 orang\n- **Kelengkapan:** Tas penyimpanan, pasak, dan tali\n- **Catatan:** Pastikan produk dikembalikan dalam kondisi baik."
+        },
+        {
+            "id": "2",
+            "name": "Budi",
+            "status": "inactive",
+            "price": "50000 / hari",
+            "rate": 3.5,
+            "total_rate": 10,
+            "image_url": "http://10.240.32.166:4000/images/product-1.png",
+            "km": 1.5,
+            "localtion": "Depok, Jawa Barat",
+            "stock": 1,
+            "description": "Dolor commodo pariatur adipisicing occaecat ex duis dolore culpa quis anim fugiat occaecat veniam cupidatat.",
+            "detail": {
+                "category": "Elektronik",
+                "merek": "Canon",
+                "model": "Dolor",
+                "kondisi": "Mulus 95%",
+                "kelengkapan": "Dolor commodo pariatur adipisicing occaecat ex duis dolore culpa quis anim fugiat occaecat veniam cupidatat."
+            },
+            "specification": "## Spesifikasi Produk\n\n- **Kondisi:** Baru / Bekas\n- **Material:** Polyester\n- **Warna:** Hitam\n- **Ukuran:** 200 x 150 cm\n- **Berat:** 2 kg\n- **Kapasitas:** 2-3 orang\n- **Kelengkapan:** Tas penyimpanan, pasak, dan tali\n- **Catatan:** Pastikan produk dikembalikan dalam kondisi baik."
+        }
+    ],
+    "payments": [
+        {
+            "id": "1",
+            "id_tx": "001",
+            "id_product": "PROD-2000D",
+            "payment_type": "QRIS",
+            "status": "pending",
+            "paid": false,
+            "total_payment": 900000,
+            "remaining_time": 900,
+            "order_id": "ORD-001-123456",
+            "seller_name": "Fitriany Wirayuda",
+            "item_name": "Kamera DSLR Canon EOS 2000D",
+            "rent_fee": 400000,
+            "deposit": 500000,
+            "qr_value": "DEMO-QRIS|ORDER-ORD-001-123456|AMOUNT-900000",
+            "created_at": "2026-11-16T10:00:00.000Z",
+            "updated_at": "2026-11-16T10:00:00.000Z"
+        },
+        {
+            "id": "2",
+            "id_tx": "002",
+            "id_product": "PROD-A7III",
+            "payment_type": "QRIS",
+            "status": "paid",
+            "paid": true,
+            "total_payment": 650000,
+            "remaining_time": 0,
+            "order_id": "ORD-002-654321",
+            "seller_name": "Fitriany Wirayuda",
+            "item_name": "Kamera DSLR Canon EOS 2000D",
+            "rent_fee": 400000,
+            "deposit": 250000,
+            "qr_value": "DEMO-QRIS|ORDER-ORD-002-654321|AMOUNT-650000",
+            "created_at": "2026-11-16T09:00:00.000Z",
+            "updated_at": "2026-11-16T09:30:00.000Z"
+        }
+    ],
+    "categories": [
+        {
+            "id": "1",
+            "name": "Camping/\nOutdoor",
+            "image_url": "http://10.240.32.166:4000/images/category-1.png"
+        },
+        {
+            "id": "2",
+            "name": "Acara/\nKegiatan",
+            "image_url": "http://10.240.32.166:4000/images/category-2.png"
+        },
+        {
+            "id": "3",
+            "name": "Rumah Tangga",
+            "image_url": "http://10.240.32.166:4000/images/category-3.png"
+        },
+        {
+            "id": "4",
+            "name": "Elektronik",
+            "image_url": "http://10.240.32.166:4000/images/category-4.png"
+        }
+    ],
+    "filters": [
+        {
+            "id": "kategori",
+            "label": "Kategori"
+        },
+        {
+            "id": "lokasi",
+            "label": "Lokasi"
+        },
+        {
+            "id": "terdekat",
+            "label": "Terdekat"
+        },
+        {
+            "id": "metode_pembayaran",
+            "label": "Metode Pembayaran"
+        }
+    ],
+    "transactions": [
+        {
+            "id": "1",
+            "name": "Tenda Camping",
+            "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400",
+            "rating": 4.8,
+            "reviewCount": 6,
+            "price": 50000,
+            "distance": "1.8 km",
+            "verified": true
+        },
+        {
+            "id": "2",
+            "name": "Toolkit",
+            "image": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400",
+            "rating": 4.5,
+            "reviewCount": 16,
+            "price": 25000,
+            "distance": "1.5 km",
+            "verified": true
+        },
+        {
+            "id": "3",
+            "name": "Kompor Portable",
+            "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400",
+            "rating": 4.8,
+            "reviewCount": 31,
+            "price": 20000,
+            "distance": "1 km",
+            "verified": true
+        },
+        {
+            "id": "4",
+            "name": "Stroller Bayi",
+            "image": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400",
+            "rating": 5,
+            "reviewCount": 38,
+            "price": 52000,
+            "distance": "1.8 km",
+            "verified": true
+        },
+        {
+            "id": "5",
+            "name": "Vacuum Cleaner",
+            "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400",
+            "rating": 4.8,
+            "reviewCount": 13,
+            "price": 27000,
+            "distance": "1 km",
+            "verified": true
+        },
+        {
+            "id": "6",
+            "name": "Kasur Lipat",
+            "image": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400",
+            "rating": 4.5,
+            "reviewCount": 24,
+            "price": 48000,
+            "distance": "1 km",
+            "verified": true
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+name: pakdul-mock-api
+
+services:
+  # json-server mock backend: REST endpoints for db.json + static /images/*
+  api:
+    build:
+      context: .
+    # `localhost/` prefix keeps the name unambiguous for Podman (no short-name lookup)
+    image: localhost/pakdul-mock-api:latest
+    container_name: pakdul-mock-api
+    environment:
+      TZ: ${TZ:-Asia/Jakarta}
+    ports:
+      # 4000 is the port baked into db.json's absolute image URLs
+      # (http://<host>:4000/images/product-1.png), so keep it on the host.
+      - "${MOCK_API_PORT:-4000}:4000"
+      # Alias used by pakdul-mobile's EXPO_PUBLIC_API_URL (http://<host>:3000)
+      - "${MOCK_API_PORT_ALIAS:-3000}:4000"
+    volumes:
+      # Mount the project dir (not the single db.json file): lowdb writes via
+      # `rename`, which replaces a single-file bind mount inside the container
+      # and silently loses every POST/PUT/DELETE. `:z` (shared SELinux relabel)
+      # is a no-op on Docker, required on SELinux hosts.
+      - .:/data:z
+      # Images are baked into the image; uncomment to edit assets live:
+      # - ./images:/srv/public/images:z,ro
+    healthcheck:
+      # Single-string CMD-SHELL: podman-compose 1.0.x mangles array forms.
+      # `wget --spider` ships with the Alpine base image.
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:4000/db || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s # json-server needs a few seconds to parse db.json
+    restart: unless-stopped
